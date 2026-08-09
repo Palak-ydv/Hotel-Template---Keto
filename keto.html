@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        nav {
+            background-color: white;
+            height: 86px;
+            width: 100%;
+        }
+
+        nav img {
+            margin-top: 15px;
+            margin-left: 106px;
+        }
+
+        .d {
+            display: flex;
+            margin-left: 600px;
+            margin-top: -43px;
+        }
+
+        nav a {
+            margin-right: 50px;
+            text-decoration: none;
+            color: black;
+            padding-bottom: 30px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            border-bottom: 4px solid red;
+            color: red;
+        }
+
+        .a {
+            color: red;
+            border-bottom: 4px solid red;
+        }
+
+        .back {
+            background-size: cover;
+            width: 100%;
+            height: 671px;
+            background-image: url('https://themewagon.github.io/keto/images/banner1.jpg');
+            background-position: center;
+        }
+
+        .book {
+            width: 453px;
+            height: 382px;
+            background-color: rgba(0, 0, 0, 0.797);
+            border-left: 5px solid red;
+            color: white;
+            margin-top: -550px;
+            margin-left: 106px;
+        }
+
+        .book h1 {
+            text-align: center;
+            position: relative;
+            top: 20px;
+        }
+
+        .book input {
+            width: 340px;
+            padding: 16px;
+            color: white;
+            background: none;
+            border: 1px solid white;
+            position: relative;
+            left: 30px;
+            margin: 10px;
+            top: 10px;
+            margin-bottom: 29px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .book button {
+            background-color: red;
+            width: 180px;
+            padding: 15px;
+            border: 1px solid red;
+            border-radius: 25px;
+            position: relative;
+            left: 130px;
+            color: white;
+            margin: 10px;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .book label {
+            text-align: left;
+            position: relative;
+            left: 30px;
+            margin: 10px;
+            top: 10px;
+        }
+
+        .book button:hover {
+            background-color: white;
+            color: red;
+            border: 1px solid rgb(238, 232, 232);
+        }
+
+        .section {
+            min-height: 600px;
+            margin-top: 100px;
+            background-color: white;
+            display: flex;
+        }
+
+        .about {
+            width: 30%;
+            margin-left: 6%;
+            position: relative;
+            top: 70px;
+        }
+
+        .head {
+            font-size: 45px;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .about p {
+            font-size: 19px;
+            color: grey;
+            line-height: 30px;
+        }
+
+        .about button {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            border-radius: 23px;
+            width: 150px;
+            padding: 12px;
+            font-size: 19px;
+            margin-top: 20px;
+        }
+
+        .about button:hover {
+            background-color: red;
+        }
+
+        .abim {
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            margin-left: 90px;
+            margin-top: 100px;
+        }
+
+        .abim img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .abim img:hover {
+            transform: scale(1.2);
+        }
+
+        .section1 {
+            text-align: center;
+        }
+
+        .our {
+            margin-top: 50px;
+            font-size: 45px;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .p {
+            margin-top: -15px;
+            font-weight: 500;
+            font-size: 21px;
+        }
+
+        .card p {
+            font-size: 19px;
+            color: #515151;
+            line-height: 22px;
+            margin-top: -10px;
+        }
+
+        .card img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.2);
+        }
+
+        .card {
+            width: 360px;
+            height: 370px;
+            background-color: white;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .cards {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 80%;
+            margin-left: 5%;
+        }
+
+        .gallery {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            margin-left: 25px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 80;
+        }
+
+        .gallery-title {
+            position: relative;
+            display: inline-block;
+            font-size: 45px;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 30px;
+        }
+
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .blog {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            margin-left: 25px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 80;
+            background-image: url('https://themewagon.github.io/keto/images/banner1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 0 80px;
+        }
+
+        .blog::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+        }
+
+        .blog-title {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            font-size: 45px;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .blog-para {
+            position: relative;
+            z-index: 1;
+            font-size: 21px;
+            color: #f1f1f1;
+            margin: 0 auto 30px;
+            line-height: 28px;
+            width: 80%;
+        }
+
+        .blog-cards {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            gap: 24px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: transparent;
+            margin-top: -20px;
+            z-index: 1;
+        }
+
+        .blog-card {
+            background-color: white;
+            border: 1px solid #e8e8e8;
+            overflow: hidden;
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.15);
+        }
+
+        .blog-card-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .blog-card-content h1 {
+            margin: 10px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .blog-card-content h3 {
+            margin: 10px;
+            font-size: 20px;
+            color: red;
+        }
+
+        .blog-card-content p {
+            font-size: 18px;
+            line-height: 26px;
+            color: #515151;
+            margin: 10px;
+        }
+
+        .contact-us-container {
+            width: 80%;
+            margin: 50px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .contact-left-card {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #dedede;
+            text-align: left;
+            box-sizing: border-box;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-left-card h1 {
+            font-size: 45px;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0 0 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: red;
+            color: white;
+            border: none;
+            height: 45px;
+            width: 177px;
+            margin-top: 10px;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .contact-map-card {
+            background-color: white;
+            border: 1px solid #dedede;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-map-card iframe {
+            width: 100%;
+            min-height: 420px;
+            border: 0;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .footer-col p {
+            color: #ccc;
+            font-size: 17px;
+            line-height: 30px;
+            margin: 0 0 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 14px;
+        }
+
+        .footer-col a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .footer-col a:hover {
+            color: red;
+        }
+
+        .footer-col .newsletter-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .footer-col .newsletter-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            background: black;
+            color: white;
+            outline: none;
+        }
+
+        .footer-col .newsletter-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .footer-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #222;
+            color: white;
+            font-size: 14px;
+            border: 1px solid #555;
+        }
+
+        .footer-socials a:hover {
+            background-color: red;
+        }
+
+        .footer-bottom {
+            text-align: left;
+            color: #ccc;
+            padding-top: 26px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="https://themewagon.github.io/keto/images/logo.png" alt="">
+        <div class="d">
+            <a class="a" href="">Home</a>
+            <a href="#about">About</a>
+            <a href="#our">Our Room</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="back"></div>
+
+    <div class="book">
+        <h1>Book a Room Online</h1>
+        <label for="Arrival">Arrival</label><br>
+        <input type="date"><br>
+        <label for="Departure">Departure</label><br>
+        <input type="date"><br>
+        <button>Book Now</button>
+    </div>
+
+    <section class="section">
+        <div class="about" id="about">
+            <h1 class="head">ABOUT US</h1>
+            <p>
+                The passage experienced a surge in popularity during the 1960s when Letraset used it on their
+                dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their
+                software. Today it's seen all around the web; on templates, websites, and stock designs. Use our
+                generator to get your own, or read on for the authoritative history of lorem ipsum.
+            </p>
+            <button>Read More</button>
+        </div>
+        <div class="abim">
+            <img src="https://themewagon.github.io/keto/images/about.png" alt="">
+        </div>
+    </section>
+
+    <section id="our" class="section1">
+        <h1 class="our">OUR ROOM</h1>
+        <p class="p">Lorem Ipsum available, but the majority have suffered</p>
+        <div class="cards">
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room1.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room2.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room3.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room4.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room5.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+            <div class="card">
+                <img src="https://themewagon.github.io/keto/images/room6.jpg" alt="">
+                <h1>Bed Room</h1>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery" id="gallery">
+        <h1 class="gallery-title">GALLERY</h1>
+        <div class="gallery-images">
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery1.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery2.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery3.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery4.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery5.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery6.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery7.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="https://themewagon.github.io/keto/images/gallery8.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="blog" id="blog">
+        <h1 class="blog-title">BLOG</h1>
+        <p class="blog-para">Lorem Ipsum available, but the majority have suffered</p>
+        <div class="blog-cards">
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="https://themewagon.github.io/keto/images/blog1.jpg" alt="">
+                </div>
+                <div class="blog-card-content">
+                    <h1>Bed Room</h1>
+                    <h3>The standard chunk</h3>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="https://themewagon.github.io/keto/images/blog2.jpg" alt="">
+                </div>
+                <div class="blog-card-content">
+                    <h1>Bed Room</h1>
+                    <h3>The standard chunk</h3>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="https://themewagon.github.io/keto/images/blog3.jpg" alt="">
+                </div>
+                <div class="blog-card-content">
+                    <h1>Bed Room</h1>
+                    <h3>The standard chunk</h3>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="contact-us-container" id="contact">
+        <div class="contact-left-card">
+            <h1>CONTACT US</h1>
+            <div class="contact-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Phone Number">
+                <textarea placeholder="Message"></textarea>
+                <button>Send Message</button>
+            </div>
+        </div>
+
+        <div class="contact-map-card">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.835882168187!2d90.3994523149819!3d23.75090398458808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0b6c6e7e7%3A0x8c8c8c8c8c8c8c8c!2sDhaka%20City%20Center!5e0!3m2!1sen!2sbd!4v1620000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Contact US</h3>
+                <p><strong>Address</strong></p>
+                <p>+01 1234569540</p>
+                <p><a href="mailto:demo@gmail.com">demo@gmail.com</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Menu Link</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Our Room</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>News letter</h3>
+                <p>Subscribe</p>
+                <div class="newsletter-form">
+                    <input class="newsletter-input" type="email" placeholder="Email">
+                    <button class="newsletter-button">Subscribe</button>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">f</a>
+                    <a href="#">t</a>
+                    <a href="#">in</a>
+                    <a href="#">g</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Your Hotel. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
